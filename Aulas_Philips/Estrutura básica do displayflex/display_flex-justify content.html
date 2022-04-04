@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Display_flex-Justify content </title>
+    <style>
+        .flex{
+            width: 400px;
+            display: flex;
+            border: 2px solid black;
+            max-width: 400px;
+            margin: 15px;
+        }
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            text-align: center;
+            color: azure;
+        }
+
+        .flex-start{
+            justify-content: flex-start;
+        }
+        .flex-end{
+            justify-content: flex-end;
+        }
+        .flex-center{
+            justify-content: center;
+        }
+        .betwen{
+            justify-content: space-between;
+        }
+        .around{
+            justify-content: space-around;
+        }
+        .evenly{
+            justify-content: space-evenly;
+        }
+        .column{
+            flex-direction: column;
+            min-height: 180px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usando o flex start</h1>
+   <section class="flex flex-start">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">o n°3</div>
+        <div class="item">e mais esse 4</div>
+   </section> 
+   
+   <h1>Usando o flex end</h1>
+   <section class="flex flex-end">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o flex center</h1>
+   <section class="flex flex-center">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o space betwen</h1>
+   <section class="flex betwen">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o space around</h1>
+   <section class="flex around">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o space evenly</h1>
+   <section class="flex evelyn">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o flex start em coluna</h1>
+   <section class="flex flex-start column">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">o n°3</div>
+        <div class="item">e mais esse 4</div>
+   </section> 
+
+   <h1>Usando o flex end com coluna</h1>
+   <section class="flex flex-end column">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+
+<h1>Usando o flex center com coluna</h1>
+   <section class="flex flex-center column">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+    
+ <h1>Usando o space betwen com colunaa</h1>
+   <section class="flex betwen column">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+<h1>Usando o space around em coluna</h1>
+   <section class="flex around column">
+    <div class="item">1</div>
+    <div class="item">item 2</div>
+    <div class="item">o n°3</div>
+    <div class="item">e mais esse 4</div>
+</section> 
+</body>
+</html>

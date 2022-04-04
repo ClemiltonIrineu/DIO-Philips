@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica de flex order e aling</title>
+</head>
+<style>
+    .conteiner{
+            max-width: 350px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .item{
+            background-color: rgb(141, 80, 255);
+            color: black;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+        .itemord{
+            flex: 1;
+            background-color: rgb(141, 80, 255);
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            margin: 10px;
+        }
+        .flex1{
+            flex: 1;
+            /*GROW=1 SHRINK=1  BASIS=0 */
+        }
+        .flex2{
+            flex: 2;
+            /*GROW=2 SHRINK=1  BASIS=0 */
+        }
+
+        .o1{
+            order: 1;
+        }
+
+        .o2{
+            order: 2;
+        }
+
+        .o3{
+            order: 3;
+        }
+        .o4{
+            order: 4;
+        }
+        .coluna{
+            flex-direction: column;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+</style>
+
+<body>
+    <h1> BRINCANDO COM O FLEX</h1>
+    <p>USANDO O FLEX = 1</p>
+    <div class="conteiner">
+        <div class="item flex1">AA</div>
+        <div class="item flex1">bbb</div>
+        <div class="item flex1">CcC</div>
+        <div class="item flex1">DDDddd</div>
+    </div>
+
+    <p>USANDO O FLEX = 2</p>
+    <div class="conteiner">
+        <div class="item flex2">AA</div>
+        <div class="item flex2">bbb</div>
+        <div class="item flex2">CcC</div>
+        <div class="item flex2">DDDddd</div>
+    </div>
+
+    <p>USANDO O FLEX mix</p>
+    <div class="conteiner">
+        <div class="item flex1">AA</div>
+        <div class="item flex2">bbb</div>
+        <div class="item flex1">CcC</div>
+        <div class="item flex2">DDDddd</div>
+    </div>
+
+    <h1> BRINCANDO COM O ORDER</h1>
+    
+    <p>USANDO O ORDEN = 0</p>
+    <div class="conteiner">
+        <div class="itemord ">1</div>
+        <div class="itemord ">2</div>
+        <div class="itemord ">3</div>
+        <div class="itemord ">4</div>
+    </div>
+
+    <p>USANDO O ORDEN mix</p>
+    <div class="conteiner">
+        <div class="itemord o4">1</div>
+        <div class="itemord o2">2</div>
+        <div class="itemord o2">3</div>
+        <div class="itemord o1">4</div>
+    </div>
+
+    
+    <p>USANDO O ORDEN mix em coluna</p>
+    <div class="conteiner coluna">
+        <div class="itemord o4">1</div>
+        <div class="itemord o2">2</div>
+        <div class="itemord o2">3</div>
+        <div class="itemord o1">4</div>
+    </div>
+
+    <h1> BRINCANDO COM O ALING-SELF</h1>
+    <p>USANDO O align-self</p>
+    <section class="conteiner">
+        <div class="item ">1</div>
+        <div class="item ">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </section>
+    
+    <p>USANDO O align-self center</p>
+    <section class="conteiner">
+        <div class="item center">111</div>
+        <div class="item center">2aaa</div>
+        <div class="item center">3gnlgjohn ohngn  dfkgg  lnbkfnb  oihn kfsljng</div>
+        <div class="item center">4we</div>
+    </section>
+
+    <p>USANDO O align-self mix</p>
+    <section class="conteiner">
+        <div class="item center">111</div>
+        <div class="item stretch">2aaa</div>
+        <div class="item end">3gkgng  flskngl nlgjohno lknl hngnkfsljng</div>
+        <div class="item start">4we</div>
+    </section>
+
+    <h1>EM COLUNA</h1>
+    <p>USANDO O align-self</p>
+    <section class="conteiner coluna">
+        <div class="item ">1</div>
+        <div class="item ">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </section>
+    
+    <p>USANDO O align-self center</p>
+    <section class="conteiner coluna">
+        <div class="item center">111</div>
+        <div class="item center">2aaa</div>
+        <div class="item center">3gnlgjohn ohngn  dfkgg  lnbkfnb  oihn kfsljng</div>
+        <div class="item center">4we</div>
+    </section>
+
+    <p>USANDO O align-self mix </p>
+    <section class="conteiner coluna">
+        <div class="item baseline">111</div>
+        <div class="item stretch">2aaa</div>
+        <div class="item end">3gkgng  flskngl nlgjohno lknl hngnkfsljng</div>
+        <div class="item start">4we</div>
+    </section>
+
+</body>
+</html>

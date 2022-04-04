@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Display_flex-flex grow</title>
+</head>
+<style> 
+        .conteiner{
+            max-width: 300px;
+            display: flex;
+            border: 2px solid black;
+           
+        }
+
+        .item{
+            background-color: aqua;
+            margin: 10px;
+            padding: 5px;
+            color: black;
+            text-align: center;
+        }
+
+        .bauto{
+            flex-basis: auto;
+        }
+        .b1{
+            flex-basis: 1;
+        }
+
+        .b0{
+            flex-basis: 0;
+        }
+        .fg-0{
+            flex-grow: 0;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-2{
+            flex-grow: 2;
+        }
+      
+</style>
+<body>
+    <h1>Usando o grow em 0</h1>
+    <div class="conteiner">
+         <div class="item fg-0">A</div>
+         <div class="item fg-0">B</div>
+         <div class="item fg-0">C</div>
+         <div class="item fg-0">E</div>
+    </div>
+
+    <h1>Usando o grow em 1</h1>
+    <div class="conteiner">
+         <div class="item fg-1">A</div>
+         <div class="item fg-1">B</div>
+         <div class="item fg-1">C</div>
+         <div class="item fg-1">E</div>
+    </div>
+
+    <h1>Usando o grow alternado</h1>
+    <div class="conteiner">
+         <div class="item fg-0">A</div>
+         <div class="item fg-2">B</div>
+         <div class="item fg-1">C</div>
+         <div class="item fg-0">E</div>
+    </div>
+
+    <h1>Usando o basis em auto com grow</h1>
+    <div class="conteiner">
+         <div class="item bauto fg-1">AA</div>
+         <div class="item bauto fg-2">BBB</div>
+         <div class="item bauto fg-0">C</div>
+    </div>
+
+    <h1>Usando o basis em 0 com grow</h1>
+    <div class="conteiner">
+         <div class="item b0 fg-1">AA</div>
+         <div class="item b0 fg-1">BBB</div>
+         <div class="item b0 fg-1">C</div>
+    </div>
+
+    <h1>Usando o basis em 1 com grow</h1>
+    <div class="conteiner">
+         <div class="item b1 fg-2">AAaaa</div>
+         <div class="item b1 fg-2">BBB</div>
+         <div class="item b1 fg-2">cccccccccccC</div>
+    </div>
+
+</body>
+</html>

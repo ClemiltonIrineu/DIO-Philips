@@ -1,0 +1,230 @@
+body{
+    text-align: center;
+}
+div img{
+    display: block;
+    width: 100%;
+}
+.container{
+    background-color: rgb(103, 103, 235);
+    display: flex;
+    margin: 10px;
+    color: azure;
+    font-size: 30px;
+    justify-content: space-between;
+}
+.list-item {
+    list-style: none;
+    display: flex;
+    align-self: center;
+}
+.item-a{
+    align-self: center;
+    color: azure;
+    margin: 15px;
+}
+
+.c-apresentacao{   
+    display: flex;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.texto{
+    font-size: 30px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+}
+
+.texto p{
+    font-size: 30px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    margin: 0px;
+}
+
+.texto h1{
+    color: rgb(103, 103, 235);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    text-align: left;
+    text-align: justify;
+}
+.texto a{
+    display: block;
+    width: 250px;
+    background-color: rgb(81, 9, 248);
+    border-radius: 30px;
+    color: azure;
+    align-self: center;
+    text-decoration: none;
+}
+
+#c-quemsomos{   
+    display: flex;
+    margin: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+#c-quemsomos h2{
+    color: rgb(103, 103, 235);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 50px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    text-align: left;
+}
+#c-quemsomos h2::before{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #6d2db0;
+    margin: 5px;
+    position: relative;
+}
+#c-quemsomos p{
+    font-size: 20px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    margin: 5px;
+    text-align: justify;
+    font-style: normal;
+}
+
+#c-quemsomos img{
+    min-width: 420px;
+}
+
+#c-servicos{   
+    background-color: rgb(103, 103, 235);;
+    margin: 10px;
+}
+#c-servicos h2{
+    color: azure;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    text-align: center;
+}
+
+.list-servicos{
+    display: flex;
+    color: azure;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    font-size: 20px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+
+}
+.list-servicos .item-list {
+    align-self: center;
+}
+.item-list a {
+    display: block;
+    width: 220px;
+    background-color: azure;
+    border-radius: 30px;
+    color: rgb(81, 9, 248);
+    align-self: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+
+#c-planos{   
+    flex-direction: column;
+    min-width: 100px;
+    align-self: center;
+    display: flex;
+}
+#c-planos h2{
+    color: rgb(103, 103, 235);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    text-align: center;
+}
+.plano-list{
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.item-plano{
+    display: flex 1;
+    margin: 45px;
+    border: 3px solid rgb(103, 103, 235);
+}
+
+.item-plano h3{
+    color: rgb(103, 103, 235);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-family:'Franklin Gothic Medium';
+    text-align: center;
+}
+.item-plano h3::after{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: rgb(103, 103, 235);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.item-plano ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.item-plano ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.item-plano ul li::before{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: blue;
+    margin-right: 5px;
+}
+
+.item-plano a{
+    display: block;
+    margin: auto;
+    width: 150px;
+    background-color: rgb(81, 9, 248);
+    border-radius: 30px;
+    color: azure;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+footer{
+    background-color: blue;
+    height: 80px;
+    display: flex;
+    align-self: center;
+}
+footer .footer{
+    justify-content: space-between;
+    color: aqua;
+}
+

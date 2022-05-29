@@ -1,0 +1,1 @@
+alert("Script fora do Body OK")

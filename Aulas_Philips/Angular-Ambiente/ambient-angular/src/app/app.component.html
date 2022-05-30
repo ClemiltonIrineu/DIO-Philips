@@ -1,0 +1,38 @@
+<h1 class="text-success text-center"> Aula Diretivas Ambiente Angular</h1>
+<!-- DIRETIVAS DE ATRIBUTO -->
+<!-- ngStyle para realizar um stilo em uma linha so
+     ngClass chamando uma class css -->
+<div [ngStyle]="{color: cont < 5 ? 'red' : 'green'}"
+     [ngClass]="{custom: cont >= 5}"
+>
+    <h2 class="text-center">Contador: {{ cont }}</h2> 
+</div>
+
+<!-- DIRETIVAS ESTRUTURAIS -->
+<!-- ngIf So vai exibir o componente se o if for true -->
+<h1 *ngIf="cont > 7; else menor"> O contador passou de 7 </h1>
+
+<ng-template #menor>
+     <h2> O contador e menor que 7 </h2>
+</ng-template>
+
+<ul [ngSwitch]="cont" class="list-group mx-auto col-3">
+<li *ngSwitchCase="3" class="list-group-item"> 
+     SWITCH CASE 3
+</li>
+<li *ngSwitchCase="6" class="list-group-item"> 
+     SWITCH CASE 6
+</li>
+<li *ngSwitchCase="9" class="list-group-item"> 
+     SWITCH CASE 9
+</li>
+<li *ngSwitchDefault="" class="list-group-item"> 
+     SWITCH CASE DEFAULT
+</li>
+</ul>
+
+<ul  class="list-group mx-auto col-3">
+<li class="list-group-item" *ngFor="let pessoa of pessoas"> 
+     O nome da pessoa e {{pessoa.name}} {{pessoa.sobrenome}}
+</li>
+</ul>

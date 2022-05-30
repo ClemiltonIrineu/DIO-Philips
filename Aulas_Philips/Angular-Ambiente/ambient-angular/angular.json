@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "fa9bf018-c9ee-4229-88c7-5ce23c8016ed"
+    "analytics": "60928cf4-4d5c-46b0-bc92-07fb3cdeca6b"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "course-manager": {
+    "ambient-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/course-manager",
+            "outputPath": "dist/ambient-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "course-manager:build:production"
+              "browserTarget": "ambient-angular:build:production"
             },
             "development": {
-              "browserTarget": "course-manager:build:development"
+              "browserTarget": "ambient-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "course-manager:build"
+            "browserTarget": "ambient-angular:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "course-manager"
+  "defaultProject": "ambient-angular"
 }

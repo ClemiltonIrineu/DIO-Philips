@@ -8,13 +8,15 @@
     <h2 class="text-center">Contador: {{ cont }}</h2> 
 </div>
 
-<!-- DIRETIVAS ESTRUTURAIS -->
-<!-- ngIf So vai exibir o componente se o if for true -->
+<!-- DIRETIVAS ESTRUTURAIS 
+ // ngIf So vai exibir o componente se o if for true 
 <h1 *ngIf="cont > 7; else menor"> O contador passou de 7 </h1>
 
 <ng-template #menor>
      <h2> O contador e menor que 7 </h2>
 </ng-template>
+
+<app-list-people></app-list-people>
 
 <ul [ngSwitch]="cont" class="list-group mx-auto col-3">
 <li *ngSwitchCase="3" class="list-group-item"> 
@@ -30,9 +32,14 @@
      SWITCH CASE DEFAULT
 </li>
 </ul>
+-->
 
-<ul  class="list-group mx-auto col-3">
-<li class="list-group-item" *ngFor="let pessoa of pessoas"> 
-     O nome da pessoa e {{pessoa.name}} {{pessoa.sobrenome}}
-</li>
-</ul>
+<div class="container my-5"> 
+     <div class="row d-flex align-items-center justify-content-center">
+          <h1 class="text-center">Listagem de personagens de Rick and Mory</h1>
+     <div class="col-12">
+          <app-list-api></app-list-api>
+     </div>
+     </div>
+</div>
+

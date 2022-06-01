@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from './shared/service/people.service';
 
 @Component({
   selector: 'app-root',
@@ -7,29 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   cont:number = 0;
-  pessoas = [
-    {
-      name: "CIAS",
-      sobrenome: "Tec"
-    },
-    {
-      name: "Clemilton",
-      sobrenome: "Irineu"
-    },
-    {
-      name: "Nill",
-      sobrenome: " & Ganesha"
-    },
-    {
-      name: "Johnny",
-      sobrenome: "Araujo"
-    },
-  ]
-  constructor (){
+   
+
+  constructor (private peopleService: PeopleService){
+
 
   }
 
   ngOnInit(): void {
+   
     let intervalo = setInterval( () => {
       this.cont++;
       if(this.cont === 10){
@@ -38,5 +25,6 @@ export class AppComponent implements OnInit {
     }, 1000)
     
   }
+
   
 }

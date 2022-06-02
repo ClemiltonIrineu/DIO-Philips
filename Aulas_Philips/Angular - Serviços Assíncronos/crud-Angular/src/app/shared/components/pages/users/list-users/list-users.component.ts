@@ -10,6 +10,13 @@ export class ListUsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers () {
+    this.userService.getUsers().subscribe(response => {
+      this.users = response;
+    })
   }
 
 }

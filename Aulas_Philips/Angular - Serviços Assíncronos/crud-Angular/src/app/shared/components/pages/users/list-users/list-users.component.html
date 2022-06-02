@@ -7,17 +7,18 @@
             <tr>
                 <th>ID: </th>
                 <th>NOME: </th>
+                <th>SOBRENOME: </th>
                 <th>IDADE: </th>
                 <th>PROFISSÃO: </th>
                 <th colspan="2"> </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>1</th>
-                <th>Cias Tec</th>
-                <th>2</th>
-                <th>Dev</th>
+            <tr *ngFor="let user of users">
+                <th>{{user.id}}</th>
+                <th>{{user.nome}}</th>
+                <th>{{user.sobrenome}}</th>
+                <th>{{user.profissao}}</th>
                 <th>
                     <button class="btn btn-primary">Editar</button>
                 </th>

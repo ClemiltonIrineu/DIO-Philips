@@ -34,7 +34,7 @@ export class UserFormComponent implements OnInit {
   }
 
   creatUser(){
-    this.userForm.get('id')?.patchValue(this.users.length+1);
+    this.userForm.get('id')?.patchValue(this.users.length + 1);
     this.userService.postUser(this.userForm.value).subscribe(result =>
       {
         console.log(`Usuario ${result.nome} ${result.sobrenome} foi cadastrado com sucesso!`);

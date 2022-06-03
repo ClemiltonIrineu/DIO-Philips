@@ -18,12 +18,13 @@
                 <th>{{user.id}}</th>
                 <th>{{user.nome}}</th>
                 <th>{{user.sobrenome}}</th>
+                <th>{{user.idade}}</th>
                 <th>{{user.profissao}}</th>
                 <th>
-                    <button class="btn btn-primary">Editar</button>
+                    <button class="btn btn-primary" [routerLink]="['/forms', user.id]">Editar</button>
                 </th>
                 <th>
-                    <button class="btn btn-danger">Excluir</button>
+                    <button class="btn btn-danger" (click)="deleteUser(user.id)">Excluir</button>
                 </th>
             </tr>
         </tbody>

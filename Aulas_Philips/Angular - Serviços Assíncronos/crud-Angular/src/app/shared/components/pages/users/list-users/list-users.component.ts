@@ -23,4 +23,16 @@ export class ListUsersComponent implements OnInit {
     })
   }
 
+  deleteUser (id: number){
+    this.userService.deleteUser(id).subscribe(response => {
+     // console.log("Usuario Excluido")
+      alert("Usuario Excluido")
+    }, (err) => {
+      console.log(err)
+    }, () => {
+      this.getUsers();
+    })
+  }
+
 }
+

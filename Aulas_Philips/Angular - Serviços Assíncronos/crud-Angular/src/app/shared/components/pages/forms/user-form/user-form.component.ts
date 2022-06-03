@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -12,8 +13,10 @@ export class UserFormComponent implements OnInit {
 
   userForm: FormGroup;
   users: Array<User> = [];
+  userId: any = '';
 
-  constructor(private formb: FormBuilder, private userService: UserService) {
+  constructor(private formb: FormBuilder, private userService: UserService, 
+              private actRouter: ActivatedRoute, private router: Router) {
     this.userForm = this.formb.group({
       id: 1,
       nome: '',
@@ -24,6 +27,23 @@ export class UserFormComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.actRouter.paramMap.subscribe(params => {
+      this.userId = params.get('id');
+      if(this.userId !== null){
+        this.userService.getUser(this.userId).subscribe(result => {
+          this.userForm.patchValue({
+            id: result[0].id,
+            nome: result[0].nome,
+            sobrenome: result[0].sobrenome,
+            idade: result[0].idade,
+            profissao: result[0].profissao
+          })
+        })
+
+      }
+    })
+
+
     this.getUsers();
   }
 
@@ -35,12 +55,36 @@ export class UserFormComponent implements OnInit {
 
   creatUser(){
     this.userForm.get('id')?.patchValue(this.users.length + 1);
-    this.userService.postUser(this.userForm.value).subscribe(result =>
-      {
-        console.log(`Usuario ${result.nome} ${result.sobrenome} foi cadastrado com sucesso!`);
-       // alert('Usuario Cadastrado');
+    this.userService.postUser(this.userForm.value).subscribe(result => {
+     // console.log(`Usuario ${result.nome} ${result.sobrenome} foi cadastrado com sucesso !`)
+        alert('Usuario Cadastrado');
+          }, (err) => {
+
+          }, () => {
+            this.router.navigate(['/']);
           })
+  }
+
+
+  updateUser() {
+    this.userService.updateUser(this.userId, this.userForm.value).subscribe(result => {
+      console.log('usuario atualizado', result);
+    }, (err) => {
+
+    }, () => {
+      this.router.navigate(['/']);
+    })
+  }
+
+  actionButton(){
+    
+    if(this.userId !== null) {
+      this.updateUser()
+    }else {
+      this.creatUser()
+    }
 
   }
+  
 
 }

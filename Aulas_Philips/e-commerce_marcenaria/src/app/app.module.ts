@@ -8,6 +8,10 @@ import { PainelComponent } from './shared/components/painel/painel.component';
 import { OrcamentoComponent } from './shared/components/orcamento/orcamento.component';
 import { SuporteComponent } from './shared/components/suporte/suporte.component';
 import { DicasComponent } from './shared/components/dicas/dicas.component';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule} from '@angular/material/card';  
+import { MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,10 @@ import { DicasComponent } from './shared/components/dicas/dicas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

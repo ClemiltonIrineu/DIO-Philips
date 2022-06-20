@@ -1,1 +1,69 @@
-<p>orcamento works!</p>
+<div class="container">
+    <h1>Solicite um orçamento</h1>
+
+    <h2>Caso tenha somente uma ideia crua, veja as nossas dicas talvez lhe ajude.</h2>
+    <a href="#" routerLink="/dicas">
+        <button type="button" class="btn btn-success mx-auto mb-1">Ajuda</button>
+    </a>
+    <h2>Caso necessario mande-nos um Oi, para que possomas ajudalos.</h2>
+    <a href="#" routerLink="/suporte">
+        <button type="button" class="btn btn-primary mx-auto mb-1" routerLink="suporte"> Fale conosco </button>
+    </a>
+</div>
+
+<form class="mt-2">
+    <div class="row mt-2">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Nome">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Sobrenome">
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" id="inputTelefone" placeholder="Contato">
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Cidade">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Estado">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="CEP">
+        </div>
+    </div>
+
+
+    <div>
+        <label for="formFileLg" class="form-label">Anexar um arquivo:</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Descrição do Pedido</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+        <label class="form-check-label" for="inlineCheckbox1">Quero um Orçamento! </label>
+    </div>
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+        <label class="form-check-label" for="inlineCheckbox2">Quero um Projeto Preliminar! </label>
+    </div>
+
+</form>
+<button type="submit" class="btn btn-primary">Enviar</button>
